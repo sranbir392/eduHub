@@ -16,7 +16,7 @@ app.use("", Router);
 
 app.listen(process.env.PORT, async () => {
   try {
-    await connection;
+    await connection();
     console.log(`server connection with ${process.env.PORT}`);
   } catch (err) {
     console.log("not connected");
