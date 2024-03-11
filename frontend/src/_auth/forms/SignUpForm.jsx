@@ -56,7 +56,7 @@ function SignUpForm() {
  
   }, [resData.status]);
   return (
-    <div className="signup-container bg-white lg:h-[600px] sm:h-[100%] sm:w-[100%] lg:w-[400px] m-auto border-2  p-6 rounded-2xl" >
+    <div className="signup-container bg-white lg:h-[600px] sm:h-[100%] sm:w-[100%] lg:w-[400px] m-auto border-2  p-6 rounded-2xl " >
       <div className="flex flex-center flex-col ">
         {/* <img src="../../../public/assets/images/logo.svg" alt="signLogo" /> */}
         <p className="text-2xl md:text-2xl font-bold text-center py-5">
