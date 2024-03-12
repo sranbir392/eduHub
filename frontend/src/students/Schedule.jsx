@@ -22,10 +22,11 @@ function Schedule() {
   const data = useSelector((pre) => pre.reducer);
   console.log(data);
   const { obj } = useContext(AuthContextData);
+
   const [details, setDetails] = useState({
     title: "",
     date: "",
-    creater: "",
+    creator: "",
   });
   const [state, setState] = useState(false);
   const dispatch = useDispatch();
@@ -46,7 +47,7 @@ function Schedule() {
     });
   };
   const handleSumit = () => {
-    if (details.title && details.date && details.creater) {
+    if (details.title && details.date && details.creator) {
       dispatch(PostscheduleData(details)).then(()=>dispatch(GetscheduleData()))
       setState(false);
     } else {
@@ -112,8 +113,8 @@ function Schedule() {
                   <input
                     type="text"
                     className="block border border-grey-light w-full p-3 rounded mb-4"
-                    name="creater"
-                    placeholder="creater"
+                    name="creator"
+                    placeholder="creator"
                     onChange={(e) =>
                       setDetails({
                         ...details,
@@ -123,7 +124,8 @@ function Schedule() {
                   />
 
                   <Button
-                    bg={"red"}
+                    bg={"blue.500"}
+                    color={"white"}
                     type="submit"
                     className="w-full  text-center py-3 rounded bg-green text-red-500 hover:bg-green-dark focus:outline-none my-1"
                     onClick={handleSumit}
@@ -147,7 +149,7 @@ function Schedule() {
     cursor={"pointer"}
   >
    <GridItem colSpan={{base:2,lg:4}} onClick={handleAccount}>
-   <Flex justifyContent={{base:"space-between" ,lg:"start"}} gap={{base:2,lg:5}} alignItems={"center"} >
+   <Flex  gap={{base:5,lg:9}} alignItems={"center"} >
                 <Image
                   src="https://students.masaischool.com/static/media/announcement-icon.4bf714660cdb7ecf44113ffbd0017f0c.svg"
                   alt="logo"
@@ -160,7 +162,7 @@ function Schedule() {
               <GridItem display={{base:"none",lg:"grid"}} colSpan={2} onClick={handleAccount}>
                 <Flex alignItems={"center"} gap={2}>
                   <Avatar name={el.creater} size="sm" />
-                  <Text fontSize={18}> {el.creater}</Text>
+                  <Text fontSize={18}> {el.creator}</Text>
                 </Flex>
               </GridItem>
               <GridItem display={{base:"none",lg:"grid"}} colSpan={2} onClick={handleAccount}>

@@ -42,7 +42,7 @@ function Assignment() {
   };
 
   const handleSumit = () => {
-    if (details.title && details.date && details.creater) {
+    if (details.title && details.date && details.creator) {
       dispatch(PostassignmentData(details)).then(() =>
         dispatch(getassignmentData())
       );
@@ -116,8 +116,8 @@ function Assignment() {
                   <input
                     type="text"
                     className="block border border-grey-light w-full p-3 rounded mb-4"
-                    name="creater"
-                    placeholder="creater"
+                    name="creator"
+                    placeholder="creator"
                     onChange={(e) =>
                       setDetails({
                         ...details,
@@ -127,7 +127,8 @@ function Assignment() {
                   />
 
                   <Button
-                    bg={"red"}
+                    bg={"blue.500"}
+                    color={"white"}
                     type="submit"
                     className="w-full  text-center py-3 rounded bg-green text-red-500 hover:bg-green-dark focus:outline-none my-1"
                     onClick={handleSumit}
@@ -156,7 +157,7 @@ function Assignment() {
                 
               >
                 <GridItem colSpan={2}   onClick={(e) => handleAccount(index)}>
-                <Flex justifyContent={{base:"space-between" ,md:"start"}} gap={2} alignItems={"center"} >
+                <Flex  gap={5} alignItems={"center"} >
                 <Image
                   src="https://students.masaischool.com/static/media/announcement-icon.4bf714660cdb7ecf44113ffbd0017f0c.svg"
                   alt="logo"
@@ -168,8 +169,8 @@ function Assignment() {
                 </GridItem>
                 <GridItem display={{base:"none",lg:"grid"}}  onClick={(e) => handleAccount(index)}>
                   <Flex  alignItems="center" gap={2}>
-                    <Avatar name={el.creater} size="sm" />
-                    <Text >{el.creater}</Text>
+                    <Avatar name={el.creator} size="sm" />
+                    <Text >{el.creator}</Text>
                   </Flex>
                 </GridItem>
                 <GridItem display={{base:"none",lg:"grid"}}  onClick={(e) => handleAccount(index)}>
@@ -222,8 +223,8 @@ function Assignment() {
                 </GridItem>
                 <GridItem display={{base:"none",lg:"grid"}} onClick={(e) => handleAccount(index)}>
                   <Flex alignItems="center" gap={2}>
-                    <Avatar name={el.creater} size="sm" />
-                    <Text fontSize={18}>{el.creater}</Text>
+                    <Avatar name={el.creator} size="sm" />
+                    <Text fontSize={18}>{el.creator}</Text>
                   </Flex>
                 </GridItem>
                 <GridItem display={{base:"none",lg:"grid"} } colSpan={1} onClick={(e) => handleAccount(index)}>

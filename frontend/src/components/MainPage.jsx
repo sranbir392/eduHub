@@ -10,6 +10,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { courseData, courseDataDelete, courseDataPost, getassignmentData } from "../redux/action";
 import { AuthContextData } from "../authProvider/AuthContainer";
 import App from "../courese/product/App";
+import Schedule from "../students/Schedule";
 
 function MainPage() {
  
@@ -287,7 +288,7 @@ function MainPage() {
               </div>
             </li>
             <li className="px-5 hidden md:block "   >
-              <div className="flex flex-row items-center mt-[420px]  h-8 "  >
+              <div className="flex flex-row items-center mt-[250px]  h-8 "  >
                 <div className="text-sm font-light tracking-wide text-gray-400 uppercase">
                   Settings
                 </div>
@@ -359,7 +360,7 @@ function MainPage() {
         <div class=" p-2 " >
           {page === 1 && <DashBoard />}
           {page === 2 && <Assignmemt />}
-          {page === 3 && <Lecture />}
+          {page === 3 && <Schedule />}
           {page === 4 && <Notification />}
           {page === 5 && <Profile />}
           {page === 6 &&  <App
