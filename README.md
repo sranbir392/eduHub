@@ -1,13 +1,12 @@
-  
-# Getting Started with Create React App
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Eduhub is an assignment for Idea clan Company.
 
 ## Available Scripts
 
 In the project directory, you can run:
-
-
+## Frontend -> npm start 
+# Deployed Link: https://edu-hub-o3lo.vercel.app/
+## backend ->npm run server 
+Deployed Link: https://eduhub-enlw.onrender.com/
 ### `npm start`
 
 Runs the app in the development mode.\
