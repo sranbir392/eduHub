@@ -9,7 +9,7 @@ const courseSchema = new mongoose.Schema({
     type: String,
     required: true
   },
-  creater: {
+  creator: {
     type: String,
     required: true
   }
